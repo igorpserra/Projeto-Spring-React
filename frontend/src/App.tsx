@@ -1,3 +1,4 @@
+import BarChart from "components/BarCharts";
 import DataTable from "components/DataTable";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
@@ -7,7 +8,16 @@ function App() {
     <>
       <NavBar />
       <div className="container">
-        <h1 className='text-primary'>hello world</h1>
+        <h1 className='text-primary'>Dashboard</h1>
+
+        <div className="row px-3">
+
+          <div className="col-5">
+            <BarChart />
+          </div>
+
+        </div>
+
         <DataTable />
       </div>
       <Footer />
