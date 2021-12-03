@@ -6,21 +6,25 @@ import com.igorp.appvendas.entities.Seller;
 
 import java.time.LocalDate;
 
-public class SaleDto {
+public class SaleDTO {
 
     private Long id;
     private Integer visited;
     private Integer deals;
     private Double amount;
     private LocalDate date;
-    private Seller seller;
 
-    public SaleDto (Sale sale){
+    private SellerDTO seller;
+
+    public SaleDTO(){}
+
+    public SaleDTO(Sale sale){
         this.id = sale.getId();
         this.visited = sale.getVisited();
         this.deals = sale.getDeals();
         this.amount = sale.getAmount();
         this.date = sale.getDate();
+        this.seller = new SellerDTO(sale.getSeller());
     }
 
     public Long getId() {
@@ -63,11 +67,11 @@ public class SaleDto {
         this.date = date;
     }
 
-    public Seller getSeller() {
+    public SellerDTO getSeller() {
         return seller;
     }
 
-    public void setSeller(Seller seller) {
+    public void setSeller(SellerDTO seller) {
         this.seller = seller;
     }
 }
