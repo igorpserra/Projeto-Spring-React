@@ -2,7 +2,7 @@ import Dashboard from "pages/Dashboard";
 import Home from "pages/Home";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function MyRoutes() {
+function Routes() {
     return (
         <BrowserRouter>
             <Switch>
@@ -17,4 +17,4 @@ function MyRoutes() {
     );
 }
 
-export default MyRoutes;
+export default Routes;
